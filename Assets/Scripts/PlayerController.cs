@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
     float jumpForce = 680.0f;
     float walkForce = 30.0f;
     float maxWalkSpeed = 2.0f;
+    Animator animator;
 
     private void Start()
     {
         Application.targetFrameRate = 60;
         this.rigid2D = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -45,5 +47,6 @@ public class PlayerController : MonoBehaviour
             this.transform.localScale = new Vector3(key, 1, 1);
         }
 
+        this.animator.speed = speedx / 2.0f;
     }
 }
