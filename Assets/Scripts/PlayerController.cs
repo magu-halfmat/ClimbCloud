@@ -49,4 +49,9 @@ public class PlayerController : MonoBehaviour
 
         this.animator.speed = speedx / 2.0f;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("ÉSÅ[ÉãÅI");
+    }
 }
